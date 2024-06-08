@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const List = styled.div`
   display: grid;
@@ -7,7 +7,7 @@ export const List = styled.div`
   justify-content: center;
   grid-gap: 32px;
   justify-items: center;
-  background-color: ${cores.bege};
+  background-color: ${colors.white};
   padding: 56px;
 
   @media (max-width: ${breakpoints.desktop}) {

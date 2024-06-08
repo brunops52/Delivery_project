@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { breakpoints } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const RestaurantDiv = styled.div`
   max-width: 434px;
-  background-color: #ff8e8e;
-  color: #fff;
+  background-color: ${colors.lightPink};
+  color: ${colors.white};
   position: relative;
   border-radius: 30px;
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.4);
@@ -63,8 +63,8 @@ export const Conteudo = styled.div`
   a {
     display: block;
     width: 90%;
-    background-color: #fff;
-    color: #ff8e8e;
+    background-color: ${colors.white};
+    color: ${colors.lightPink};
     font-size: 14px;
     padding: 4px 6px;
     border: none;

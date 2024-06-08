@@ -4,16 +4,14 @@ import cart_image from '../../assets/images/cart_png.png'
 import return_image from '../../assets/images/return_png.png'
 import imagemHead from '../../assets/images/Vector.png'
 import { Imagem, List } from './styles'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { open } from '../../store/reducers/cart'
-import { RootReducer } from '../../store'
 
 const HeaderLoja = () => {
   const dispatch = useDispatch()
-  const { items } = useSelector((state: RootReducer) => state.cart)
 
-  const abreCarrinho = () => {
+  const openCart = () => {
     dispatch(open())
   }
   return (
@@ -28,7 +26,7 @@ const HeaderLoja = () => {
           <li>
             <img src={logo} alt="logo" />
           </li>
-          <li onClick={abreCarrinho}>
+          <li onClick={openCart}>
             <a>
               <img src={cart_image} alt="cart" />
             </a>

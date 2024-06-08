@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 type Props = {
   size: 'small' | 'medium' | 'big'
@@ -18,7 +18,7 @@ const mudaTamanho = (props: Props) => {
 export const TitleCart = styled.h2`
   font-weight: bold;
   font-size: 16px;
-  color: ${cores.bege};
+  color: ${colors.white};
   margin-bottom: 16px;
 `
 export const InputGroup = styled.div<Props>`
@@ -38,14 +38,14 @@ export const InputGroup = styled.div<Props>`
   label {
     font-size: 14px;
     font-weight: bold;
-    color: ${cores.lightYellow};
+    color: ${colors.white};
     display: block;
   }
 
   input {
     width: 100%;
     height: 32px;
-    background-color: ${cores.lightYellow};
+    background-color: ${colors.white};
     border: none;
     margin: 8px 0;
     font-weight: bold;
@@ -64,7 +64,7 @@ export const ButtonGroup = styled.div`
 export const Resposta = styled.div`
   p {
     font-size: 14px;
-    color: ${cores.lightYellow};
+    color: ${colors.white};
     margin-bottom: 24px;
   }
 `

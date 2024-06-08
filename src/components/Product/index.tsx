@@ -22,7 +22,7 @@ type Props = {
   produto: Cardapio
 }
 
-export const formataPreco = (preco = 0) => {
+export const formatPrice = (preco = 0) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL'
@@ -59,6 +59,7 @@ const Product = ({
         <h3>{titulo}</h3>
         <p>{getDescricao(descricao)}</p>
         <Botao
+          className="botao"
           onClick={() => {
             setModal(true)
           }}
@@ -84,8 +85,8 @@ const Product = ({
               <br />
               <span>Serve: de {porcao}</span>
             </p>
-            <Botao onClick={addCarrinho}>
-              Adicionar ao carrinho - {formataPreco(preco)}
+            <Botao className="botao" onClick={addCarrinho}>
+              Adicionar ao carrinho - {formatPrice(preco)}
             </Botao>
           </ModalDescribe>
         </ModalContent>

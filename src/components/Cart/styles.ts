@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import lixo from '../../assets/images/lixeira.png'
 
 export const Overlay = styled.div`
@@ -28,7 +28,7 @@ export const CartContainer = styled.div`
 `
 
 export const Sidebar = styled.aside`
-  background-color: #ffac7d;
+  background-color: ${colors.orange};
   max-width: 360px;
   width: 100%;
   z-index: 1;
@@ -37,7 +37,7 @@ export const Sidebar = styled.aside`
   .empty-text {
     font-size: 16px;
     line-height: 22px;
-    color: ${cores.lightYellow};
+    color: ${colors.white};
     text-align: center;
   }
 
@@ -48,8 +48,8 @@ export const Sidebar = styled.aside`
 
 export const CartItem = styled.li`
   display: flex;
-  background-color: #fff;
-  color: #ff8e8e;
+  background-color: ${colors.white};
+  color: ${colors.lightPink};
   padding: 8px 8px 12px 8px;
   margin-bottom: 16px;
   position: relative;
@@ -84,7 +84,7 @@ export const CartItem = styled.li`
 `
 export const Prices = styled.div`
   display: flex;
-  color: #fff;
+  color: ${colors.white};
   justify-content: space-between;
   margin-bottom: 16px;
   margin-top: 24px;

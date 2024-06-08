@@ -1,10 +1,10 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-export const cores = {
-  lightYellow: '#FFEBD9',
-  salmon: '#E66767',
+export const colors = {
+  pink: '#F48787',
+  orange: '#FFAC7D',
   white: '#fff',
-  bege: '#FFF8F2'
+  lightPink: '#FF8E8E'
 }
 
 export const breakpoints = {
@@ -22,12 +22,25 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(to right, #ffac7d, #f48787);
+    background: linear-gradient(to right, ${colors.orange}, ${colors.pink});
 
 
     .display-none {
       display: none;
     }
+
+    .botao{
+
+      &:hover {
+    transform: translateY(2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+      &:active {
+      transform: translateY(1px);
+      ox-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
   }
 
   .container {
@@ -39,8 +52,8 @@ export const GlobalCss = createGlobalStyle`
 export const Button = styled.button`
   width: 100%;
   padding: 4px 0;
-  background-color: #fff;
-  color: #ff8e8e;
+  background-color: ${colors.white};
+  color: ${colors.lightPink};
   border: none;
   font-weight: bold;
   font-size: 14px;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Imagem = styled.div`
   padding: 30px;
@@ -24,7 +24,7 @@ export const List = styled.ul`
   a {
     font-size: 18px;
     font-weight: bold;
-    color: ${cores.salmon};
+    color: ${colors.pink};
     text-decoration: none;
     cursor: pointer;
 

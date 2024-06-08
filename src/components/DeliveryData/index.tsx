@@ -13,7 +13,7 @@ const DeliveryData = () => {
   const dispatch = useDispatch()
   const { items } = useSelector((state: RootReducer) => state.cart)
 
-  const mostraCarrinho = () => {
+  const cartShow = () => {
     dispatch(showCart())
   }
 
@@ -246,10 +246,16 @@ const DeliveryData = () => {
               </div>
             </InputGroup>
             <ButtonGroup>
-              <Button type="button" onClick={getErrorDelivery}>
+              <Button
+                className="botao"
+                type="button"
+                onClick={getErrorDelivery}
+              >
                 Continuar com o pagamento
               </Button>
-              <Button onClick={mostraCarrinho}>Voltar para o carrinho</Button>
+              <Button className="botao" onClick={cartShow}>
+                Voltar para o carrinho
+              </Button>
             </ButtonGroup>
           </div>
           <div className={isInDelivery ? 'display-none' : ''}>
@@ -325,8 +331,10 @@ const DeliveryData = () => {
               </div>
             </InputGroup>
             <ButtonGroup>
-              <Button type="submit">Finalizar pagamento</Button>
-              <Button onClick={() => setIsInDelivery(true)}>
+              <Button className="botao" type="submit">
+                Finalizar pagamento
+              </Button>
+              <Button className="botao" onClick={() => setIsInDelivery(true)}>
                 Voltar para a edição de endereço
               </Button>
             </ButtonGroup>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import imagemHead from '../../assets/images/Vector.png'
 
 export const SpaceDiv = styled.div`
@@ -45,7 +45,7 @@ export const Imagem = styled.div`
 export const Titulo = styled.h1`
   font-size: 48px;
   font-weight: bold;
-  color: #fff;
+  color: ${colors.white};
   max-width: 714px;
 
   @media (max-width: ${breakpoints.tablet}) {

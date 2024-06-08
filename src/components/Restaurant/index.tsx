@@ -13,6 +13,13 @@ type Props = {
   id: number
 }
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
 const Restaurant = ({ image, tags, titulo, nota, descricao, id }: Props) => {
   return (
     <RestaurantDiv>
@@ -30,7 +37,9 @@ const Restaurant = ({ image, tags, titulo, nota, descricao, id }: Props) => {
           </span>
         </TituloDiv>
         <p>{descricao}</p>
-        <Link to={`/restaurante/${id}`}>Saiba Mais</Link>
+        <Link className="botao" onClick={scrollToTop} to={`/restaurante/${id}`}>
+          Saiba Mais
+        </Link>
       </Conteudo>
     </RestaurantDiv>
   )

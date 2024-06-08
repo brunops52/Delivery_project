@@ -3,7 +3,7 @@ import { CartContainer, CartItem, Overlay, Prices, Sidebar } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { close, hideCart, remove } from '../../store/reducers/cart'
-import { formataPreco } from '../Product'
+import { formatPrice } from '../Product'
 import { Button } from '../../styles'
 import DeliveryData from '../DeliveryData'
 
@@ -14,15 +14,15 @@ const Cart = () => {
 
   const dispatch = useDispatch()
 
-  const fechaCarrinho = () => {
+  const closeCart = () => {
     dispatch(close())
   }
 
-  const removePrato = (id: number) => {
+  const removeDish = (id: number) => {
     dispatch(remove(id))
   }
 
-  const escondeCarrinho = () => {
+  const cartHide = () => {
     dispatch(hideCart())
   }
 
@@ -37,7 +37,7 @@ const Cart = () => {
 
   return (
     <CartContainer className={isOpen ? 'esta-aberto' : ''}>
-      <Overlay onClick={fechaCarrinho} />
+      <Overlay onClick={closeCart} />
       {items.length === 0 ? (
         <Sidebar>
           <p className="empty-text">
@@ -55,20 +55,19 @@ const Cart = () => {
                     <img src={item.foto} alt={item.nome} />
                     <div>
                       <h3>{item.nome}</h3>
-                      <span>{formataPreco(item.preco)}</span>
+                      <span>{formatPrice(item.preco)}</span>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => removePrato(item.id)}
-                    />
+                    <button type="button" onClick={() => removeDish(item.id)} />
                   </CartItem>
                 ))}
               </ul>
               <Prices>
                 <p>Valor total</p>
-                <p>{formataPreco(getTotalPrice())}</p>
+                <p>{formatPrice(getTotalPrice())}</p>
               </Prices>
-              <Button onClick={escondeCarrinho}>Continuar com a entrega</Button>
+              <Button className="botao" onClick={cartHide}>
+                Continuar com a entrega
+              </Button>
             </>
           ) : (
             <>

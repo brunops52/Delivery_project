@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import imagemHead from '../../assets/images/Vector.png'
 
 export const Section = styled.section`
@@ -15,7 +15,7 @@ export const List = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  background-color: #fff;
+  background-color: ${colors.white};
   margin: 0 auto;
   padding: 0 120px;
   grid-gap: 80px;
@@ -29,7 +29,7 @@ export const List = styled.div`
     grid-column: span 2;
     font-size: 64px;
     font-weight: bold;
-    color: #ff8e8e;
+    color: ${colors.lightPink};
   }
 
   @media (max-width: ${breakpoints.desktop}) {

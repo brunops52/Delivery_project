@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { Props } from '.'
 
 export const HeroDiv = styled.div`
@@ -20,7 +20,7 @@ background-image: url(${(Props) => Props.loja.capa});
 background-size: cover;
 position: relative;
 z-index: 1;
-color: ${cores.white};
+color: ${colors.white};
 padding: 32px;
 width: 90%;
 margin: 0 auto;

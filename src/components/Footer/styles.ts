@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import imagemHead from '../../assets/images/Vector.png'
 
 export const FooterSection = styled.div`
   background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  color: ${cores.salmon};
+  color: ${colors.pink};
   text-align: center;
 
   div {
@@ -42,7 +42,7 @@ export const FooterSection = styled.div`
     p {
       font-size: 20px;
       font-weight: bold;
-      color: #fff;
+      color: ${colors.white};
     }
 
     @media (max-width: ${breakpoints.tablet}) {
