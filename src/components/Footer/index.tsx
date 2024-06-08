@@ -11,13 +11,22 @@ const Footer = () => (
         <img src={logo} />
         <ul>
           <li>
-            <img src={git} alt="git" />
+            <a href="https://github.com/brunops52">
+              <img src={git} alt="git" />
+            </a>
           </li>
           <li>
-            <img src={whats} alt="whats" />
+            <a
+              href="https://wa.me/47992650353
+"
+            >
+              <img src={whats} alt="whats" />
+            </a>
           </li>
           <li>
-            <img src={instagram} alt="instagram" />
+            <a href="https://www.instagram.com/brunops64/">
+              <img src={instagram} alt="instagram" />
+            </a>
           </li>
         </ul>
         <p>
